@@ -1,0 +1,31 @@
+[push]
+    default = current
+[user]
+	email = forestrick819@gmail.com
+	name = Rick Lin
+[alias]
+    br = branch
+    ci = commit
+    co = checkout
+    cf = config
+    cfl = config --list
+    df = diff
+    dot = !~/bin/git-dot
+    edit  = ! sh -c '$EDITOR $(git fshow $1)' -
+    fshow = ! sh -c 'git show --pretty="format:" --name-only $1 | grep -v "^$" | uniq | sed -e "s#^#$(git rev-parse --show-toplevel)/#"' -
+    graphviz = !~/bin/git-graphviz
+    l = log --graph --oneline --decorate --all
+    lbt = log --all --pretty --graph --decorate --oneline --simplify-by-decoration
+    lc = log --graph --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+    log1 = log --pretty=one
+    lola = log --pretty --oneline --decorate --all
+    # lolag = log --pretty --oneline --decorate --all --graph
+    lolg = log --pretty --oneline --decorate --graph
+    p = !git5 pending
+    sb = show-branch --color
+    snippets = !git log --pretty=format:'%ai | %s' --all --since='@{1 week ago}' --no-merges | sort | uniq
+    st = status -s -uno
+    stat = status
+    wtf = !~/bin/git-wtf
