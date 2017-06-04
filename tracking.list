@@ -1,0 +1,17 @@
+.17media+
+.arcrc+
+.aws+
+.config+
+.docker
+.gitconfig
+.kube*
+.oh-my-zsh
+.redis
+.ssh*
+.tigrc
+.tmux-themepack
+.tmux.conf
+.vim
+.viminfo
+.vimrc
+.zshrc
